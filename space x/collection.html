@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="collection.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div id="nav">
+
+        <img id="space"
+            src="https://shop.spacex.com/cdn/shop/files/SpaceX_logo_white_6eaf0441-42af-4396-974e-d6dc2f8ff45c_160x.png?v=1614778073"
+            alt="">
+        <div id="main">
+
+            <a class="link" href="x.html"> X COLLECTION</a>
+            <a class="link" href="" id="men"> MENS</a>
+
+            <a class="link" href=""> WOMENS</a>
+            <a class="link" href=""> KIDS</a>
+            <a class="link" href=""> ASSESSORIES</a>
+
+            <div id="box"> 
+                <ul id="ul">
+                    <li class="list">Shirt</li>
+                    <li class="list">Outer wear</li>
+                    <li class="list">View all</li>
+                </ul>
+            </div>
+        </div>
+        <div id="last">
+            <a class="link" href=""> ACCOUNT</a>
+            <a class="link" href=""> SEARCH</a>
+            <a class="link" href=""> CART <span id="second">0</span></a>
+        </div>
+    </div>
+
+    <main>
+        <div class="left">
+            <img src="https://shop.spacex.com/cdn/shop/files/SpacexYearofDragonTeeBlackFront_900x.png?v=1709407468" alt="">
+            <img src="https://shop.spacex.com/cdn/shop/files/SpacexYearofDragonTeeBlackBack_900x.png?v=1709407468" alt="">
+            <img src="https://shop.spacex.com/cdn/shop/files/SpacexYearofDragonTeeCloseupFront_900x.png?v=1709407468" alt="">
+            <img src="https://shop.spacex.com/cdn/shop/files/SpacexYearofDragonTeeCloseupBack_900x.png?v=1709407468" alt="">
+            <img src="https://shop.spacex.com/cdn/shop/files/SpacexYearofDragonTeeFront_900x.png?v=1709407468" alt="">
+        </div>
+        <div class="right">
+            <h2>UNISEX YEAR OF DRAGON T-SHIRT</h2>
+            <br>
+            <span>$30.00</span><br>
+            <br><br>
+            <h4>Fabric Content:</h4><br><br>
+            <p>Black</p>
+            <ul>
+                <li>Small-5X: 60% Cotton / 40% Polyester</li>
+            </ul>
+            <br><br>
+            <p>Gray</p>
+            <ul>
+                <li>Small-4X: 100% Cotton </li>
+            </ul>
+            <br><br><br><br><br>
+
+            <p>Color</p>
+            <span id="black"></span>
+            <span id="gray"></span>
+            <br><br><br><br><br>
+            <label for="">Size:</label>
+            <br>
+            <select name="size" id="">
+                <option value="s">s</option>
+                <option value="m">m</option>
+                <option value="l">l</option>
+                <option value="xl">xl</option>
+            </select>
+            <br><br>
+            <label for="">Quantity:</label>
+            <br>
+            <div class="quant">
+                <span id="remove"> <button id="min">-</button></span>
+                <span id="one">1</span>
+                <span id="add"><button id="plus">+</button></span>
+            </div>
+            <br><br>
+
+            <button id="cart">ADD TO CART</button>
+        </div>
+    </main>
+    <div id="feed">
+        <p id="last-1"> FAQs
+            Search
+            Privacy Policy
+            Terms & Conditions</p>
+    </div>
+
+
+
+    <script>
+        let btn1=document.getElementById("min")
+        let btn2=document.getElementById("plus")
+        let one=document.getElementById("one")
+
+        let count=1
+        let count1=0
+        
+
+
+        btn2.addEventListener( "click",()=>{
+            
+
+            if(btn2.innerText==="+" ){
+                if(count>=1){
+
+                
+                count++;
+                one.innerText=count
+                }
+            }
+           
+
+        })
+
+        btn1.addEventListener( "click",()=>{
+
+            if(btn1.innerText==="-"){
+
+                if(count>1){
+
+                
+                count--;
+                one.innerText=count
+                }
+            }
+           
+
+        })
+
+        let cart=document.getElementById("cart")
+        
+        let second=document.getElementById("second")
+
+        cart.addEventListener("click",()=>{
+
+            // if(count>=1){
+            // count1++
+            // second.innerText=count1;
+            // }
+            
+            second.innerText=one.innerText
+
+        })
+
+
+        let men=document.getElementById("men")
+        let box=document.getElementById("box")
+        let ul=document.getElementById("ul")
+
+        men.addEventListener("mouseover",()=>{
+            if(box.style.display==="block"){
+                box.style.display="none"
+                
+                
+            }
+            else{
+                box.style.display="block"
+                
+            }
+        })
+
+
+        men.addEventListener("mouseout",()=>{
+            if(box.style.display==="none"){
+                box.style.display="block"
+    
+               
+            }
+            else{
+                box.style.display="none"
+    
+                
+            }
+        })
+        
+        box.addEventListener("mouseover",()=>{
+            ul.style.display="block"
+        })
+
+        // box.addEventListener("mouseover",()=>{
+        //     if(box.style.display==="block"){
+        //         box.style.display="none"
+                
+                
+        //     }
+        //     else{
+        //         box.style.display="block"
+                
+        //     }
+
+        // })
+
+
+        // box.addEventListener("mouseout",()=>{
+        //     if(box.style.display==="none"){
+        //         box.style.display="block"
+    
+               
+        //     }
+        //     else{
+        //         box.style.display="none"
+    
+                
+        //     }
+        // })
+        
+
+        // .addEventListener("mouseover",()=>{
+        //     if(box.style.display==="none")
+        //     ul.style.display="block"
+        // })
+
+
+    </script>
+    
+</body>
+</html>
+    
